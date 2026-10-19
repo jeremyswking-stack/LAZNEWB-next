@@ -391,7 +391,6 @@ local function drawWindow()
             meName = 'Silentpal'
         end
 
-        -- top row controls
         styleGreenButton()
         if imgui.Button('Minimize##minimize', 100, 30) then
             windowMinimized = true
@@ -403,7 +402,6 @@ local function drawWindow()
 
         imgui.Separator()
 
-        -- mode buttons
         styleModeButtons()
         imgui.Separator()
 
@@ -463,7 +461,7 @@ end
 mq.bind('/laznewb', commandHandler)
 mq.imgui.init(SCRIPT_NAME, drawWindow)
 
-mg.cmd('/echo LAZNEWB loaded.')
+mq.cmd('/echo LAZNEWB loaded.')
 
 while running do
     mq.doevents()
